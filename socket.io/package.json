@@ -1,0 +1,15 @@
+﻿{
+    "name": "socketio-test",
+    "version": "0.0.1",
+    "author": "Adrian Chia",
+    "main": "server.js",
+    "dependencies": {
+        "express": "*",
+        "socket.io": "*",
+        "jade": "*"
+    },
+    "license":"MIT",
+    "engines": {
+        "node":">=0.6"
+    }
+}
