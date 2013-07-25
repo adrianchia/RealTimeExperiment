@@ -22,14 +22,9 @@
     });
  
     sendButton.onclick = sendMessage = function() {
-        if(name.value == "") {
-            alert("Please type your name!");
-        }else {
-            var text = field.value;
-            socket.emit('send', { message: text, username: name.value});
-            field.value = "";
-        }
-        
+        var text = field.value;
+        socket.emit('send', { message: text, username: name.value});
+        field.value = "";
     };
 }
 

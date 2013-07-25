@@ -8,8 +8,12 @@ app.engine('jade', require('jade').__express);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res) {
-    res.render('page');
+    res.render('index');
 });
+
+app.get('/chat', function(req,res) {
+    res.render('page', {username: req.query.username});
+})
 
 var io = require('socket.io').listen(app.listen(port));
 
