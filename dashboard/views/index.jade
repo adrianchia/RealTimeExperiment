@@ -1,0 +1,60 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		title Hello World
+		link(rel='stylesheet', href='/css/normalize.css')
+		link(rel='stylesheet', href='/css/main.css')
+		link(ref='stylesheet', href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700")
+		script(src="/js/vendor/modernizr-2.6.2.min.js")
+	body
+		div.wrapper
+			header
+				div.container.clearfix
+					h1 Overview
+						span July 8-12, 2013
+						a.button Change Date Range
+			div.container.clearfix
+				div.third.widget.doughnut
+					h3 Breakdown of Hours
+					p
+						a.button(href="") Filter By Employee
+					div.canvas-container
+						canvas#hours
+						span.status
+					div.chart-legend
+						ul
+							li.ship Shipping &amp; Receiving
+							li.rework Rework
+							li.admin Administrative
+							li.prod Production
+				div.third.widget.line
+					div.chart-legend
+						h3 Shipments Per Day
+						p
+							span This Week &mdash; 
+								strong Last Week
+						p
+							a.button(href="") Change Date Range
+							a.button(href="") Filter By Location
+					div.canvas-container
+						canvas#shipments
+				div.third.widget
+					div.chart-legend
+						h3 Customer Service Assessment
+						p based on words mentioned
+						p
+							a.button(href="") Track another word
+					div.canvas-container
+						canvas#departments
+			div.push
+			footer
+		script(src="/socket.io/socket.io.js")
+		script(src="/bower_components/chartjs/Chart.min.js")
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
+		script.
+			window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>');
+		script(src='js/plugins.js')
+		script(src='js/main.js')

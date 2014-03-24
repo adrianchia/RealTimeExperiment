@@ -1,0 +1,13 @@
+{
+  "name": "api-servers",
+  "version": "0.0.0",
+  "homepage": "https://github.com/adrianchia/RealTimeExperiment",
+  "authors": [
+    "Adrian Chia <achia@adrianchia.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chartjs": "*"
+  }
+}
